@@ -12,37 +12,74 @@ body {
   margin-top: 70px;
 }
 
+/* NAVIGATION */
 .navbar {
   background: var(--midnight-purple);
 }
 .navbar-brand {
   color: var(--parchment) !important;
   font-family: "Cinzel", serif;
+  font-weight: 700;
 }
 .nav-link {
   color: var(--cauldron-green) !important;
+  font-weight: 600;
 }
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: var(--pumpkin-orange) !important;
 }
 
+/* HERO */
 .hero {
   background: var(--midnight-purple);
   padding: 80px 30px;
   border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .btn-witch {
   background: var(--pumpkin-orange);
   color: #fff;
   font-weight: bold;
   border-radius: 25px;
+  transition: all 0.3s ease;
 }
+.btn-witch:hover {
+  background: var(--cauldron-green);
+  color: var(--midnight-purple);
+}
+
+/* SECTIONS */
+.section-title {
+  color: var(--midnight-purple);
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+}
+
+/* CARDS */
+.card {
+  border: none;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-title {
+  color: var(--midnight-purple);
+  font-weight: 700;
+}
+
+/* FOOTER */
 .footer {
   background: var(--midnight-purple);
   color: var(--parchment);
   padding: 15px;
+  font-size: 0.9rem;
 }
-.section-title {
-  color: var(--midnight-purple);
-  font-family: "Cinzel", serif;
+
+/* RESPONSIVE TWEAKS */
+@media (min-width: 992px) {
+  .hero {
+    padding: 120px 60px;
+  }
 }
