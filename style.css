@@ -2,109 +2,128 @@
   Author: Ethan Marxen
   Course: FALL 2025 ADVD CASCADING STYLE SHEETS (WDD222-001-35461 Gillis)
   Date: November 10, 2025
-  This stylesheet affects all pages, especially the Contact page.
+  Gothic Witch color theme for Witchwich Sandwiches
 */
 
-/* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fdfaf7;
-  color: #333;
-  margin: 0;
-  padding-top: 70px; /* offset for fixed navbar */
+:root {
+  --dark-violet: #1b0b2e;
+  --midnight-purple: #2d084a;
+  --amethyst: #6a1b9a;
+  --pale-parchment: #f3efe2;
+  --witch-gold: #e6a700;
+  --misty-gray: #ddd;
 }
 
-h1, h2, h3 {
-  color: #301934; /* deep plum for headings */
+/* General */
+body {
+  font-family: 'Cinzel', serif;
+  background-color: var(--pale-parchment);
+  color: #2a1f2d;
+  padding-top: 70px;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #2e0f33 !important; /* dark purple background */
+  background-color: var(--dark-violet);
+  border-bottom: 2px solid var(--witch-gold);
 }
 
 .navbar-brand {
+  color: var(--witch-gold) !important;
   font-weight: bold;
-  color: #f9b233 !important; /* golden yellow accent */
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 1px;
 }
 
 .nav-link {
-  color: #fff !important;
-  transition: color 0.3s;
+  color: var(--pale-parchment) !important;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #f9b233 !important;
+  color: var(--witch-gold) !important;
 }
 
-/* Jumbotron / Hero Section */
+/* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #3d1a42, #592c63);
-  color: #fdfaf7;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  background: radial-gradient(circle at center, var(--amethyst) 0%, var(--midnight-purple) 100%);
+  color: var(--pale-parchment);
+  padding: 100px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
   font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--misty-gray);
 }
 
-/* Form Styles */
-form {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.form-label {
-  font-weight: 600;
-  color: #3d1a42;
-}
-
+/* Button */
 .btn-witch {
-  background-color: #f9b233;
-  color: #2e0f33;
+  background-color: var(--witch-gold);
+  color: #1b0b2e;
+  font-weight: 700;
   border: none;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
 }
 
 .btn-witch:hover {
-  background-color: #f3a41e;
-  transform: scale(1.03);
+  background-color: #ffcc33;
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  background-color: #fffaf5;
+  border: 2px solid var(--misty-gray);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+  color: var(--midnight-purple);
+  font-weight: 700;
+}
+
+.card-text {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Footer */
 .footer {
-  background-color: #2e0f33;
-  color: #fff;
-  padding: 1rem 0;
-  margin-top: 4rem;
+  background-color: var(--dark-violet);
+  color: var(--pale-parchment);
+  border-top: 2px solid var(--witch-gold);
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
-/* Utility Classes */
-.section-title {
-  color: #2e0f33;
-  font-weight: 700;
-}
-
-/* MEDIA QUERY - affects the contact page responsiveness */
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
   }
-  form {
-    padding: 1.5rem;
+  .hero {
+    padding: 70px 20px;
   }
-  body {
-    padding-top: 60px;
+  .btn-witch {
+    padding: 8px 18px;
   }
 }
