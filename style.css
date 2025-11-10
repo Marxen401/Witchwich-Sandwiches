@@ -1,85 +1,110 @@
-:root {
-  --midnight-purple: #3C1361;
-  --cauldron-green: #7ED957;
-  --pumpkin-orange: #E67E22;
-  --parchment: #F5E6CC;
-}
+/*
+  Author: Ethan Marxen
+  Course: FALL 2025 ADVD CASCADING STYLE SHEETS (WDD222-001-35461 Gillis)
+  Date: November 10, 2025
+  This stylesheet affects all pages, especially the Contact page.
+*/
 
+/* General Styles */
 body {
-  background: var(--parchment);
-  color: #2E2E2E;
-  font-family: "Open Sans", sans-serif;
-  margin-top: 70px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfaf7;
+  color: #333;
+  margin: 0;
+  padding-top: 70px; /* offset for fixed navbar */
 }
 
-/* NAVIGATION */
+h1, h2, h3 {
+  color: #301934; /* deep plum for headings */
+}
+
+/* Navbar */
 .navbar {
-  background: var(--midnight-purple);
+  background-color: #2e0f33 !important; /* dark purple background */
 }
+
 .navbar-brand {
-  color: var(--parchment) !important;
-  font-family: "Cinzel", serif;
-  font-weight: 700;
+  font-weight: bold;
+  color: #f9b233 !important; /* golden yellow accent */
 }
+
 .nav-link {
-  color: var(--cauldron-green) !important;
-  font-weight: 600;
+  color: #fff !important;
+  transition: color 0.3s;
 }
+
 .nav-link:hover,
 .nav-link.active {
-  color: var(--pumpkin-orange) !important;
+  color: #f9b233 !important;
 }
 
-/* HERO */
+/* Jumbotron / Hero Section */
 .hero {
-  background: var(--midnight-purple);
-  padding: 80px 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #3d1a42, #592c63);
+  color: #fdfaf7;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+/* Form Styles */
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #3d1a42;
+}
+
 .btn-witch {
-  background: var(--pumpkin-orange);
-  color: #fff;
-  font-weight: bold;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-.btn-witch:hover {
-  background: var(--cauldron-green);
-  color: var(--midnight-purple);
-}
-
-/* SECTIONS */
-.section-title {
-  color: var(--midnight-purple);
-  font-family: "Cinzel", serif;
-  font-weight: 700;
-}
-
-/* CARDS */
-.card {
+  background-color: #f9b233;
+  color: #2e0f33;
   border: none;
-  transition: transform 0.2s ease;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
-.card:hover {
-  transform: translateY(-5px);
+
+.btn-witch:hover {
+  background-color: #f3a41e;
+  transform: scale(1.03);
 }
-.card-title {
-  color: var(--midnight-purple);
+
+/* Footer */
+.footer {
+  background-color: #2e0f33;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 4rem;
+}
+
+/* Utility Classes */
+.section-title {
+  color: #2e0f33;
   font-weight: 700;
 }
 
-/* FOOTER */
-.footer {
-  background: var(--midnight-purple);
-  color: var(--parchment);
-  padding: 15px;
-  font-size: 0.9rem;
-}
-
-/* RESPONSIVE TWEAKS */
-@media (min-width: 992px) {
-  .hero {
-    padding: 120px 60px;
+/* MEDIA QUERY - affects the contact page responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  form {
+    padding: 1.5rem;
+  }
+  body {
+    padding-top: 60px;
   }
 }
