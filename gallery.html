@@ -8,8 +8,33 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fake image blocks */
+        .placeholder-block {
+            width: 100%;
+            background: #d8d8d8;
+            height: 300px;
+        }
+        .placeholder-square {
+            width: 100%;
+            padding-top: 100%;
+            background: #d8d8d8;
+        }
+        .placeholder-circle {
+            width: 100%;
+            padding-top: 100%;
+            background: #d8d8d8;
+            border-radius: 50%;
+        }
+        .placeholder-pill {
+            width: 100%;
+            padding-top: 45%;
+            background: #d8d8d8;
+            border-radius: 50rem;
+        }
+    </style>
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -42,24 +67,15 @@
     <div class="carousel-inner rounded-3 overflow-hidden shadow">
 
         <div class="carousel-item active">
-            <img src="/images/sandwich1.jpg"
-                 class="d-block w-100 carousel-img"
-                 alt="Sandwich 1"
-                 onerror="this.src='https://picsum.photos/id/1015/1200/500'">
+            <div class="placeholder-block"></div>
         </div>
 
         <div class="carousel-item">
-            <img src="/images/sandwich2.jpg"
-                 class="d-block w-100 carousel-img"
-                 alt="Sandwich 2"
-                 onerror="this.src='https://picsum.photos/id/1025/1200/500'">
+            <div class="placeholder-block"></div>
         </div>
 
         <div class="carousel-item">
-            <img src="/images/sandwich3.jpg"
-                 class="d-block w-100 carousel-img"
-                 alt="Sandwich 3"
-                 onerror="this.src='https://picsum.photos/id/1035/1200/500'">
+            <div class="placeholder-block"></div>
         </div>
 
     </div>
@@ -78,18 +94,15 @@
     <div class="row g-4">
 
         <div class="col-md-4">
-            <img src="/images/square1.jpg" class="img-fluid rounded shadow-sm"
-                 onerror="this.src='https://picsum.photos/400'">
+            <div class="placeholder-square rounded shadow-sm"></div>
         </div>
 
         <div class="col-md-4">
-            <img src="/images/square2.jpg" class="img-fluid rounded-circle shadow-sm"
-                 onerror="this.src='https://picsum.photos/401'">
+            <div class="placeholder-circle shadow-sm"></div>
         </div>
 
         <div class="col-md-4">
-            <img src="/images/square3.jpg" class="img-fluid rounded-pill shadow-sm"
-                 onerror="this.src='https://picsum.photos/402'">
+            <div class="placeholder-pill shadow-sm"></div>
         </div>
 
     </div>
